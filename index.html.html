@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GL&P Digital - Sites profissionais para pequenos negócios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#000000',
+                        'secondary': '#1a1a1a',
+                        'tertiary': '#333333',
+                        'light-gray': '#f5f5f5',
+                        'mid-gray': '#e0e0e0',
+                        'dark-gray': '#424242'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #ffffff;
+            color: #000000;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background: #000;
+        }
+        
+        .partners-photo {
+            filter: grayscale(100%);
+            object-fit: cover;
+            transition: filter 0.4s ease;
+        }
+        
+        .partners-photo:hover {
+            filter: grayscale(70%);
+        }
+        
+        .whatsapp-btn {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        
+        input:focus, textarea:focus {
+            outline: 1px solid #000;
+        }
+        
+        .hero-overlay {
+            background: rgba(255, 255, 255, 0.9);
+        }
+        #prod1,#prod2,#prod3:hover{
+            cursor: pointer;
+        }
+        #div_nome{
+            display: flex;
+            flex-direction: row;
+        }
+        #logo{
+            width: 100%;
+            height: 100%;
+            border-radius: 4%;
+        }
+        @media (max-width: 768px) {
+            .section-title::after {
+                width: 60px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-white fixed w-full z-50 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4 md:py-5">
+                <div id="div_nome" class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold tracking-tight">GL&P <span class="text-gray-700">Digital</span></h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="flex space-x-10">
+                        <a id="btn_01" href="#home" class="font-medium hover:text-gray-600 transition-all">Home</a>
+                        <a id="btn_02" href="#servicos" class="font-medium hover:text-gray-600 transition-all">Serviços</a>
+                        <a id="btn_03" href="#sobre" class="font-medium hover:text-gray-600 transition-all">Sobre</a>
+                        <a id="btn_04" href="#contato" class="font-medium hover:text-gray-600 transition-all">Contato</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-900">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="font-medium hover:text-gray-600 transition-all py-1">Home</a>
+                <a href="#servicos" class="font-medium hover:text-gray-600 transition-all py-1">Serviços</a>
+                <a href="#sobre" class="font-medium hover:text-gray-600 transition-all py-1">Sobre</a>
+                <a href="#contato" class="font-medium hover:text-gray-600 transition-all py-1">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção Home -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 relative min-h-screen flex items-center">
+        <div class="absolute inset-0 z-0">
+            <div class="h-full w-full bg-gray-50 opacity-50"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-6">Sites profissionais para pequenos negócios</h1>
+                <p class="text-xl md:text-2xl text-gray-700 mb-10 max-w-2xl mx-auto">
+                    Seu negócio merece um site profissional. Vamos conversar?
+                </p>
+                <a href="#contato" class="inline-block bg-black text-white py-3 px-8 font-medium tracking-wide text-lg hover:bg-gray-800 transition-all">Solicite orçamento</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="servicos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title inline-block text-3xl md:text-4xl font-bold">Nossos Serviços</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+                <!-- Serviço 1 -->
+                <div id='prod1' class="border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-all">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center">
+                            <i class="fas fa-window-restore text-3xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Site Básico</h3>
+                    <p class="text-gray-700 mb-6 text-center">Presença online eficiente para começar seu negócio digital. Preço especial para pequenos empreendedores.</p>
+                    <div class="text-center mb-6">
+                        <span class="text-2xl font-bold">R$ 2.200,00</span>
+                        <span class="text-gray-600 text-sm block">ou 4x de R$ 550,00</span>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Até 5 páginas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Design responsivo</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Formulário de contato</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Integração com redes sociais</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Serviço 2 -->
+                <div id="prod2" class="border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-all transform md:-translate-y-4 relative">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center">
+                            <i class="fas fa-shopping-cart text-3xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Site Intermediário</h3>
+                    <p class="text-gray-700 mb-6 text-center">Solução completa com recursos avançados para seu negócio. Preço acessível com parcelamento.</p>
+                    <div class="text-center mb-6">
+                        <span class="text-2xl font-bold">R$ 4.200,00</span>
+                        <span class="text-gray-600 text-sm block">ou 6x de R$ 700,00</span>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Todos os recursos do Site Básico</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Até 15 páginas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Catálogo de produtos/serviços</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Sistema de agendamento</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>SEO básico</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Serviço 3 -->
+                <div id="prod3" class="prods border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-all">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center">
+                            <i class="fas fa-bezier-curve text-3xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Site Personalizado</h3>
+                    <p class="text-gray-700 mb-6 text-center">Solução sob medida para necessidades específicas do seu negócio.</p>
+                    <div class="text-center mb-6">
+                        <span class="text-2xl font-bold">Sob consulta</span>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Solução completa e exclusiva</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Desenvolvimento personalizado</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Recursos avançados</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Otimização para conversões</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Integrações especializadas</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Suporte técnico -->
+            <div class="max-w-3xl mx-auto mt-16 bg-gray-50 p-8 rounded-lg border border-gray-200">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="mb-6 md:mb-0 md:mr-6">
+                        <div class="w-20 h-20 rounded-full bg-gray-100 flex items-center justify-center">
+                            <i class="fas fa-headset text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold mb-2">Suporte técnico contínuo</h3>
+                        <p class="text-gray-700">
+                            Garantimos suporte técnico após o desenvolvimento do seu site para resolver eventuais problemas,
+                            realizar atualizações e garantir seu funcionamento contínuo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title inline-block text-3xl md:text-4xl font-bold">Sobre Nós</h2>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <p class="text-lg leading-relaxed mb-8">
+                        Fundada em 2025 por Guilherme Coelho, Lucca Meliande e Paulina Cunha, ex-alunos de Redes de Computadores do IFRJ, a GL&P Digital nasceu da vontade de conectar pequenos negócios ao mundo digital.
+                    </p>
+                    
+                    <div class="grid grid-cols-3 gap-6 mb-12">
+                        <!-- Placeholders para fotos dos sócios (preto e branco) -->
+                        <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64 partners-photo">
+                            <img id="logo" src="" alt="logo">
+                        </div>
+                        <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64 partners-photo">
+                            <img id="logo" src="" alt="logo">
+                        </div>
+                        <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64 partners-photo">
+                            <img id="logo" src="" alt="logo">
+                        </div>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-12">
+                        Guilherme Coelho, Lucca Meliande e Paulina Cunha - Fundadores da GL&P Digital
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <h3 class="text-xl font-bold mb-4 flex items-center justify-center">
+                            <i class="fas fa-bullseye mr-3 text-gray-700"></i>
+                            Missão
+                        </h3>
+                        <p class="text-gray-700 text-center">
+                            Democratizar o acesso à presença digital de qualidade, oferecendo soluções web acessíveis e eficientes para pequenos negócios.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <h3 class="text-xl font-bold mb-4 flex items-center justify-center">
+                            <i class="fas fa-lightbulb mr-3 text-gray-700"></i>
+                            Visão
+                        </h3>
+                        <p class="text-gray-700 text-center">
+                            Ser referência em desenvolvimento web acessível para pequenos negócios em todo o Brasil.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <h3 class="text-xl font-bold mb-4 flex items-center justify-center">
+                            <i class="fas fa-heart mr-3 text-gray-700"></i>
+                            Valores
+                        </h3>
+                        <p class="text-gray-700 text-center">
+                            Simplicidade, transparência, qualidade técnica e comprometimento.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title inline-block text-3xl md:text-4xl font-bold">Contato</h2>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                        <h3 class="text-2xl font-bold mb-6">Entre em contato</h3>
+                        <p class="text-gray-700 mb-8">
+                            Pronto para levar seu negócio para o próximo nível com um site profissional? Preencha o formulário ou entre em contato diretamente por um de nossos canais.
+                        </p>
+                        
+                        <div class="space-y-5">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-gray-100 flex-shrink-0 flex items-center justify-center">
+                                    <i class="fab fa-whatsapp text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold">WhatsApp</h4>
+                                    <a href="https://wa.me/5522988242004" class="text-gray-700 hover:text-gray-900 transition-all">(22) 98824-2004</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-gray-100 flex-shrink-0 flex items-center justify-center">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold">E-mail</h4>
+                                    <a href="mailto:contato@glpdigital.com.br" class="text-gray-700 hover:text-gray-900 transition-all">contato@glpdigital.com.br</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-gray-100 flex-shrink-0 flex items-center justify-center">
+                                    <i class="fas fa-clock text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold">Horário de atendimento</h4>
+                                    <p class="text-gray-700">Segunda a Sexta, das 9h às 18h</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2">
+                        <form class="bg-gray-50 p-8 rounded-lg border border-gray-200">
+                            <div class="mb-5">
+                                <label for="nome" class="block mb-2 text-sm font-medium">Nome Completo</label>
+                                <input type="text" id="nome" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none" required>
+                            </div>
+                            
+                            <div class="mb-5">
+                                <label for="email" class="block mb-2 text-sm font-medium">E-mail</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none" required>
+                            </div>
+                            
+                            <div class="mb-5">
+                                <label for="mensagem" class="block mb-2 text-sm font-medium">Mensagem</label>
+                                <textarea id="mensagem" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-black text-white py-3 px-6 font-medium hover:bg-gray-800 transition-all">Enviar mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="py-12 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <h2 class="text-2xl font-bold">GL&P Digital</h2>
+                    <p class="text-gray-400 mt-2">Sites profissionais para pequenos negócios</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-all">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-all">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-all">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+                <p>© 2025 GL&P Digital. Todos os direitos reservados.</p>
+                <p class="mt-2">Desenvolvido com paixão pelos fundadores Guilherme Coelho, Lucca Meliande e Paulina Cunha.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://wa.me/5522988242004" class="whatsapp-btn fixed bottom-8 right-8 w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-xl z-50">
+        <i class="fab fa-whatsapp text-white text-3xl"></i>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Fechar menu mobile ao clicar em um link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Form Submission
+        const contactForm = document.querySelector('form');
+        if(contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Mostra um alerta de sucesso
+                alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                
+                // Limpa o formulário
+                contactForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>
